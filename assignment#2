@@ -1,0 +1,69 @@
+
+<?php
+#1
+echo (int)(15.2 + 14.7) + (10.5 + 10.5); // 50
+echo '<br>';
+echo gettype((int)(15.2 + 14.7) + (int)(10.5 + 10.5)); // Integer
+
+#2
+echo '<br>';
+echo gettype(100);
+echo '<br>';
+echo var_dump(100);
+
+
+#3
+echo '<br>';
+echo "Hello \"Elzero\" \\\\ \"\"\" We Love \"\$\$PHP\"";
+
+
+#4
+echo '<br>';
+echo nl2br("We \n Love \n Elzero \n Web \n School");
+
+
+#5
+echo '<br>';
+echo<<<'print'
+        Hello "'Elzero'"
+        We Love $Programming$
+        Languages Specially "PHP"
+        print;
+
+#6
+$something = "Programming";
+echo '<br>';
+echo <<<'code'
+        Hello \PHP\
+        We Love $something
+        code;
+
+
+echo '<br>';
+echo <<<"code"
+        Hello \PHP\
+        We Love $something
+        code;
+
+
+#8
+echo '<br>';
+echo '<pre>';
+print_r([
+  "FrontEnd"=>[
+    0=>"HTML",
+    1=>"CSS",
+    "JS"=>[
+      "Vuejs"=>[
+      2=>"v2",
+      3=>"v3"
+    ],
+    0=>"Reactjs",
+    1=>"Svelte"
+  ],
+
+]]);
+echo '</pre>';
+
+?>
+
