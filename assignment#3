@@ -1,0 +1,59 @@
+assignment #1
+<?php $title="Elzero Courses" ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=<?php $title ?>>
+    <title>Welcome To <?php echo $title ?> </title>
+  </head>
+  <body>
+    <h1><?php echo $title ?></h1>
+    <p>Here In <?php echo $title ?> We Provide Front-End And Back-End Courses</p>
+    <hr>
+    <div><?php echo $title ?> Is The What You Need.</div>
+    <footer>All Right Reserved To <?php echo $title ?></footer>
+  </body>
+</html>
+
+
+assignment #3
+<?php 
+$a = 200;
+$b = &$a;
+$a = 100;
+
+echo $b; // 100
+
+
+
+assignment #4
+<?php 
+echo '<pre>';
+echo $_SERVER["DOCUMENT_ROOT"];
+echo "<br>";
+$server_name = (isset($_SERVER['SERVER_NAME']))? // check if SERVER_NAME is set
+    $_SERVER['SERVER_NAME'] :                    // if yes, use HTTP header value
+    php_uname("n");  
+    echo $server_name;
+    echo "<br>";
+
+echo $_SERVER["DOCUMENT_ROOT"];
+echo "<br>";
+echo $_SERVER["OPENSSL_CONF"];
+echo'</pre>';
+
+
+assignment #6
+<?php 
+
+echo "<pre>";
+echo __LINE__;
+echo "</pre>";
+
+echo  "<br>";
+echo __FILE__;
+echo  "<br>";
+echo __DIR__;
