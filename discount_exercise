@@ -1,0 +1,38 @@
+<?php
+
+$name="Fidaa";
+$is_student=false;
+$is_orphan=false;
+$country="UAE";
+$price=100;
+$student_discount=10;
+$orphan_discount=20;
+$country_discount=50;
+
+if($country=="Palestine"){
+if($is_student){
+  if($is_orphan){
+    echo "<br>";
+    echo "orphan discount :".$orphan_discount.", country discount is:".$country_discount."and student discount :".$student_discount;
+    echo "<br>";
+    echo "the price is:".$price-$student_discount-$country_discount-$orphan_discount;  
+  }
+  else{
+    echo "<br>";
+    echo "student discount".$student_discount."and country discount is:".$country_discount;
+    echo "<br>";
+    echo "the price is:".$price-$student_discount-$country_discount;  
+  }
+}
+else{
+  echo "<br>";
+  echo "country discount  is:".$country_discount;
+  echo "<br>";
+  echo "the price is:".$price-$country_discount;  
+}
+}
+else{
+echo "<br>";
+echo "no discount the price is:".$price;
+echo "<br>";
+}
