@@ -1,0 +1,91 @@
+#1
+function greeting($name,$title="private"){
+if($title=="Male")echo "Hello Mr ".$name;
+elseif($title=="Female")echo "Hello Miss ".$name;
+else{
+  echo "Hello ".$name;
+}  
+}
+
+greeting("Osama", "Male");
+echo "<br>";
+greeting("Eman", "Female");
+echo "<br>";
+greeting("Sameh");
+echo "<br>";
+
+
+
+#2 
+
+function get_arguments(){
+$all=" ";
+foreach(func_get_args() as $arg):
+  $all.=$arg." ";
+endforeach;
+
+  return $all;
+}
+print_r(get_arguments("Hello", "Elzero", "Web", "School"));
+
+
+#--------------------------
+<?php
+
+function get_arguments(...$arr){
+$all=" ";
+foreach($arr as $arg):
+  $all.=$arg." ";
+endforeach;
+
+  return $all;
+}
+print_r(get_arguments("Hello", "Elzero", "Web", "School"));
+
+#3
+
+function sum_all(...$nums){
+$sum=0;
+
+foreach($nums as $val):
+if($val==5)continue;
+if($val==10)$val=20;
+$sum+=$val;
+endforeach;
+
+return $sum; 
+}
+
+// Needed Output
+echo sum_all(10, 12, 5, 6, 6, 10); // 64
+echo "<br>";
+echo sum_all(5, 10, 5, 10); // 40
+
+
+#4
+<?php
+
+function multiply(...$nums): int {
+  $res = 1;
+
+  foreach ($nums as $val) {
+    if (is_string($val)) {
+      continue;
+    }
+    if (is_numeric($val)) {
+      $val = (int)$val;
+    }
+    $res *= $val;
+  }
+
+  return $res;
+}
+
+// Test cases
+echo multiply(10, 20);        // Output: 200
+echo "<br>";
+echo multiply("A", 10, 30);  // Output: 300
+echo "<br>";
+echo multiply(100.5, 10, "B");// Output: 1000
+
+
